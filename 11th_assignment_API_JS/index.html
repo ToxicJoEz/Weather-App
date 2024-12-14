@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>
+                <img src="https://cdn-icons-png.flaticon.com/512/1163/1163666.png" alt="Weather Icon" class="weather-icon">
+                Weather App
+            </h1>
+        </header>
+
+        <section class="search">
+            <input type="text" id="city" placeholder="Enter city name" aria-label="Enter city name">
+            <button id="getWeather" aria-label="Get Weather">Find</button>
+        </section>
+
+        <section class="weather-cards">
+            <!-- Card for current day's weather -->
+            <div class="card" id="weather">
+                <div class="firstCardDays">
+                    <p>Date: <span id="date"></span></p>
+                    <p>Day: <span id="day"></span></p>
+                </div>
+                <h2 id="locationName">City Name</h2>
+                <h1><span id="temperature"></span>°C</h1>
+                <p class="icons">
+                    
+                    <img id="currentIcon" alt="Weather Icon">
+                    <span id="condition"></span>
+                </p>
+                <p>Wind Speed: <span id="windSpeed"></span> km/h</p>
+            </div>
+
+            <!-- Card for next day -->
+            <div class="card" id="forecastDay1">
+                <div class="firstCardDays"><h2 id="day1Name"></h2></div>
+                <h3 class="center-align"><span id="day1Temp"></span>°C</h3>
+                <p class="icons center-align">
+                    
+                    <img id="day1Icon" alt="Weather Icon">
+                    <span id="day1Condition"></span>
+                </p>
+            </div>
+
+            <!-- Card for the day after the next -->
+            <div class="card" id="forecastDay2">
+                <div class="firstCardDays"><h2 id="day2Name"></h2></div>
+                <h3 class="center-align"><span id="day2Temp"></span>°C</h3>
+                <p class="icons center-align">
+                    
+                    <img id="day2Icon" alt="Weather Icon">
+                    <span id="day2Condition"></span>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
